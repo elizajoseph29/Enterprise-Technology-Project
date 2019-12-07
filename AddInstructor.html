@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>INSTRUCTOR</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="Instructor.js"></script>
+</head>
+<body>
+
+<header>
+  <h2>INSTRUCTOR</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a class="active" href="College.html">Home</a></li>
+      <li><a href="Instructor.html?id=all">View & Modify Instructor</a></li>
+      <li><a href="AddInstructor.html?id=new">Add new Instructor</a></li>		  
+    </ul>
+  </nav>
+  
+  <article>
+  <div class="row">
+	<div class="container">
+		<div class="row">
+		  <h2>ADD/EDIT INSTRUCTOR</h2>
+		
+		</div>
+		<div class="row">
+		  <div class="col-25">
+			<label for="insId"><b>INSTRUCTOR ID</b></label>
+		  </div>
+		  <div class="col-75">
+			<input type="text" placeholder="Enter Instructor ID" id="insId" required>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-25">
+			<label for="fname"><b>FIRST NAME</b></label>
+		  </div>
+		  <div class="col-75">
+			<input type="text" placeholder="Enter Email" id="fname" required>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-25">
+			<label for="lname"><b>LAST NAME</b></label>
+		  </div>
+		  <div class="col-75">
+			<input type="text" placeholder="Enter Email" id="lname" required>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-25">
+			<label for="phone"><b>PHONE</b></label>
+		  </div>
+		  <div class="col-75">
+			<input type="text" placeholder="Enter Email" id="phone" required>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-25">
+			<label for="email"><b>EMAIL</b></label>
+		  </div>
+		  <div class="col-75">
+			<input type="text" placeholder="Enter Email" id="email" required>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-25">
+			<label for="address"><b>ADDRESS</b></label>
+		  </div>
+		  <div class="col-75">
+			<input type="text" placeholder="Enter Email" id="address" required>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="col-25">
+			<label for="course"><b>COURSE</b></label>
+		  </div>
+		  <div class="col-75">
+			<input type="text" placeholder="Enter Email" id="course" required>
+		  </div>
+		</div>
+		<div class="row">
+			<br><hr><br>
+			
+				<input type="submit" value="Update" id="btnUpdate" onclick="update()"/>
+				<input type="submit" value="Submit" id="btnSubmit" onclick="addNewInstructor()"/>
+			
+		</div>		
+	</div>
+</div>
+  </article>
+</section>
+
+
+<script>
+	$(document).ready(function(){	
+		modifyInstructor();
+	});
+	
+	
+</script>
+
+</body>
+</html>

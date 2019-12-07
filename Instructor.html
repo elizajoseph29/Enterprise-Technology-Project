@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>INSTRUCTOR</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="Instructor.js"></script>
+</head>
+<body>
+
+<header>
+  <h2>Instructor</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a class="active" href="College.html">Home</a></li>
+      <li><a href="Instructor.html?id=all">View & Modify Instructor</a></li>
+      <li><a href="AddInstructor.html?id=new">Add new Instructor</a></li>
+      	
+    </ul>
+  </nav>
+  
+  <article>
+	<p id="showData"></p>
+  </article>
+</section>
+
+
+<script>
+$(document).ready(function(){
+	//displayAll();
+	var params = new window.URLSearchParams(window.location.search);
+	var insId=params.get('id').toString(); //validate the query string		
+	if (insId=="all")
+	{
+		displayAll();
+	}
+	else
+	{
+		var result = confirm("Do you really want to delete this record?"); 
+		if (result == true) { 
+			deleteDocument(insId);
+		} 
+	}
+});
+
+
+
+</script>
+
+</body>
+</html>
